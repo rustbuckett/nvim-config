@@ -15,5 +15,22 @@ return require('packer').startup(function()
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
 	}
+	--lualine
+	use {
+	    'nvim-lualine/lualine.nvim',
+	    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+	--indent_blankline
+	--gitsigns
+	--iron.nvim
+	--ale_linter
+	--languagetool
+	--neogit
+	--coc
+	--zen-mode
+	--auto-pairs
+	--neoformat?
+	--grammarous
+	--tabline
 
 end)
