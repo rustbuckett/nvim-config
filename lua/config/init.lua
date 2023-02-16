@@ -1,3 +1,7 @@
 require('config.nvim-tree')
 require('config.nvim-lualine')
 require('config.alpha-nvim')
+require('config.indent-blankline')
+--require('config.nvim-autopairs')
+require('config.gitsigns')
+--require('config.neogit')
