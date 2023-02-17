@@ -45,6 +45,11 @@ map('n', '<leader><CR>', '<Plug>(iron-cr)', {})
 map('n', '<leader>i', '<plug>(iron-interrupt)', {})
 map('n', '<leader>q', '<Plug>(iron-exit)', {})
 map('n', '<leader>c', '<Plug>(iron-clear)', {})
+-- iron also has a list of commands, see :h iron-commands for all available commands
+map('n', '<leader>rs', '<cmd>IronRepl<cr>', {})
+map('n', '<leader>rr', '<cmd>IronRestart<cr>', {})
+map('n', '<leader>rf', '<cmd>IronFocus<cr>', {})
+map('n', '<leader>rh', '<cmd>IronHide<cr>', {})
 
 --[ keybinds for Refactoring ]
 -- prompt for a refactor to apply when the remap is triggered

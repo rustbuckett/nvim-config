@@ -27,15 +27,21 @@ return require('packer').startup(function()
 	    end
 	}
 	--TODO iron.nvim
+	use {'hkupty/iron.nvim'}
 	--TODO ale_linter
 	--TODO languagetool
 	use { 'TimUntersberger/neogit', 
 	    requires = { {'nvim-lua/plenary.nvim'} },
 	    config = function()
-		require('neogit').setup()
+		    require('neogit').setup()
 	    end
 	}
-	--TODO coc, or some other autocomplete/hint plugin
+--[[ 	TODO coc, or some other autocomplete/hint plugin 
+--      this is going to be little more involved than the other plugins
+--      I think I want to use nvim-cmp, but it includes snippet engines
+--      and language servers and all kinds of stuff
+--      or I may use coq-nvim. I mean, it's fast as FUCK.
+--]]
     use {
         "folke/zen-mode.nvim",
         config = function()
@@ -50,7 +56,6 @@ return require('packer').startup(function()
 	}
 	--TODO neoformat?
 	--TODO grammarous
-	--TODO tabline
     use {
         'akinsho/bufferline.nvim', 
         tag = "v3.*", 
