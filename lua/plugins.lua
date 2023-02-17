@@ -36,7 +36,12 @@ return require('packer').startup(function()
 	    end
 	}
 	--TODO coc, or some other autocomplete/hint plugin
-	--TODO zen-mode
+    use {
+        "folke/zen-mode.nvim",
+        config = function()
+          require("zen-mode").setup()
+        end
+    }
 	use {
 	    "windwp/nvim-autopairs",
     	    config = function() 
@@ -46,6 +51,14 @@ return require('packer').startup(function()
 	--TODO neoformat?
 	--TODO grammarous
 	--TODO tabline
+    use {
+        'akinsho/bufferline.nvim', 
+        tag = "v3.*", 
+        requires = 'nvim-tree/nvim-web-devicons',
+        config = function()
+            require("bufferline").setup()
+        end
+    }
 	
     -- I didn't realize I wanted these. Found on neovimcraft.com
 	use {

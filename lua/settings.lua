@@ -6,7 +6,7 @@ vim.cmd [[hi VertSplit cterm=NONE]]
 vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
 vim.opt.fillchars={eob=' '}
 vim.wo.number = true
---vim.opt.splitbelow = true
+vim.opt.termguicolors = true
 
 vim.opt.number = true
 vim.opt.tabstop = 4
