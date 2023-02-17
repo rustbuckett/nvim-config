@@ -27,20 +27,12 @@ return require('packer').startup(function()
 	    end
 	}
 	use {'hkupty/iron.nvim'} -- I don't know if I need this afterall. I may just use terminal
-	--TODO ale_linter -> this may actually be nvim-lint and could be nvim-lint managed by mason
-	--TODO languagetool
 	use { 'TimUntersberger/neogit', 
 	    requires = { {'nvim-lua/plenary.nvim'} },
 	    config = function()
 		    require('neogit').setup()
 	    end
 	}
---[[ 	TODO coc, or some other autocomplete/hint plugin 
---      this is going to be little more involved than the other plugins
---      I think I want to use nvim-cmp, but it includes snippet engines
---      and language servers and all kinds of stuff
---      or I may use coq-nvim. I mean, it's fast as FUCK.
---]]
     use {
         "folke/zen-mode.nvim",
         config = function()
@@ -53,8 +45,6 @@ return require('packer').startup(function()
 		require("nvim-autopairs").setup()
 	    end --how do i move this to config?
 	}
-	--TODO neoformat?
-	--TODO grammarous
     use {
         'akinsho/bufferline.nvim', 
         tag = "v3.*", 
@@ -106,5 +96,8 @@ return require('packer').startup(function()
         end
     }
 
+	--TODO languagetool
+	--TODO neoformat (a plugin to autoformat code)
+	--TODO grammarous
 
 end)
