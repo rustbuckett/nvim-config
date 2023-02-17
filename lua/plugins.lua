@@ -38,24 +38,25 @@ return require('packer').startup(function()
 		require('neogit').setup()
 	    end
 	}
-	--use {
-	--    'tanvirtin/vgit.nvim',
-	--    requires = { {'nvim-lua/plenary.nvim'} },
-	--    config = function()
-	--	require('vgit').setup()
-	--    end
-	--}
 	--coc
 	--zen-mode
 	--auto-pairs
 	use {
-		"windwp/nvim-autopairs",
+	    "windwp/nvim-autopairs",
     	    config = function() 
-		    require("nvim-autopairs").setup()
+		require("nvim-autopairs").setup()
 	    end --how do i move this to config?
 	}
 	--neoformat?
 	--grammarous
 	--tabline
+	
+	use {
+	    'numToStr/Comment.nvim',
+	    config = function()
+	        require('Comment').setup()
+	    end
+	}
+
 
 end)
