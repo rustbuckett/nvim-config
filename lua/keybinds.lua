@@ -45,3 +45,19 @@ map('n', '<leader><CR>', '<Plug>(iron-cr)', {})
 map('n', '<leader>i', '<plug>(iron-interrupt)', {})
 map('n', '<leader>q', '<Plug>(iron-exit)', {})
 map('n', '<leader>c', '<Plug>(iron-clear)', {})
+
+--[ keybinds for Refactoring ]
+-- prompt for a refactor to apply when the remap is triggered
+map("v", "<leader>rr", ":lua require('refactoring').select_refactor()<CR>", { noremap = true, silent = true, expr = false })
+-- Remaps for the refactoring operations currently offered by the plugin
+map("v", "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], {noremap = true, silent = true, expr = false})
+map("v", "<leader>rf", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function To File')<CR>]], {noremap = true, silent = true, expr = false})
+map("v", "<leader>rv", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]], {noremap = true, silent = true, expr = false})
+map("v", "<leader>ri", [[ <Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
+
+-- Extract block doesn't need visual mode
+map("n", "<leader>rb", [[ <Cmd>lua require('refactoring').refactor('Extract Block')<CR>]], {noremap = true, silent = true, expr = false})
+map("n", "<leader>rbf", [[ <Cmd>lua require('refactoring').refactor('Extract Block To File')<CR>]], {noremap = true, silent = true, expr = false})
+
+-- Inline variable can also pick up the identifier currently under the cursor without visual mode
+map("n", "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
