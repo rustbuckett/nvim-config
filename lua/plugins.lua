@@ -51,12 +51,20 @@ return require('packer').startup(function()
 	--grammarous
 	--tabline
 	
+    -- I didn't realize I wanted these. Found on neovimcraft.com
 	use {
 	    'numToStr/Comment.nvim',
 	    config = function()
 	        require('Comment').setup()
 	    end
 	}
+    use {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = function()
+          require("todo-comments").setup ()
+        end
+    }
 
 
 end)
