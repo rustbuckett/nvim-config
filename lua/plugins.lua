@@ -19,37 +19,33 @@ return require('packer').startup(function()
 	    'nvim-lualine/lualine.nvim',
 	    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
-	--indent_blankline
 	use {'lukas-reineke/indent-blankline.nvim'}
-	--gitsigns
 	use {
 	    'lewis6991/gitsigns.nvim',
 	    config = function()
 	      require('gitsigns').setup()
 	    end
 	}
-	--iron.nvim
-	--ale_linter
-	--languagetool
-	--neogit, or whatever git support
+	--TODO iron.nvim
+	--TODO ale_linter
+	--TODO languagetool
 	use { 'TimUntersberger/neogit', 
 	    requires = { {'nvim-lua/plenary.nvim'} },
 	    config = function()
 		require('neogit').setup()
 	    end
 	}
-	--coc
-	--zen-mode
-	--auto-pairs
+	--TODO coc, or some other autocomplete/hint plugin
+	--TODO zen-mode
 	use {
 	    "windwp/nvim-autopairs",
     	    config = function() 
 		require("nvim-autopairs").setup()
 	    end --how do i move this to config?
 	}
-	--neoformat?
-	--grammarous
-	--tabline
+	--TODO neoformat?
+	--TODO grammarous
+	--TODO tabline
 	
     -- I didn't realize I wanted these. Found on neovimcraft.com
 	use {
@@ -62,9 +58,20 @@ return require('packer').startup(function()
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
         config = function()
-          require("todo-comments").setup ()
+          require("todo-comments").setup()
         end
     }
+    use {
+        "ThePrimeagen/refactoring.nvim",
+        requires = {
+            {"nvim-lua/plenary.nvim"},
+            {"nvim-treesitter/nvim-treesitter"}
+        },
+        config = function()
+            require("refactoring").setup()
+        end
+    }
+
 
 
 end)
