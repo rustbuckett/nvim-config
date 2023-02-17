@@ -26,9 +26,8 @@ return require('packer').startup(function()
 	      require('gitsigns').setup()
 	    end
 	}
-	--TODO iron.nvim
 	use {'hkupty/iron.nvim'}
-	--TODO ale_linter
+	--TODO ale_linter -> this may actually be nvim-lint and could be nvim-lint managed by mason
 	--TODO languagetool
 	use { 'TimUntersberger/neogit', 
 	    requires = { {'nvim-lua/plenary.nvim'} },
