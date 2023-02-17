@@ -31,11 +31,18 @@ return require('packer').startup(function()
 	--iron.nvim
 	--ale_linter
 	--languagetool
-	--neogit
-	--use { 'TimUntersberger/neogit', 
+	--neogit, or whatever git support
+	use { 'TimUntersberger/neogit', 
+	    requires = { {'nvim-lua/plenary.nvim'} },
+	    config = function()
+		require('neogit').setup()
+	    end
+	}
+	--use {
+	--    'tanvirtin/vgit.nvim',
 	--    requires = { {'nvim-lua/plenary.nvim'} },
 	--    config = function()
-	--	require('neogit').setup()
+	--	require('vgit').setup()
 	--    end
 	--}
 	--coc
