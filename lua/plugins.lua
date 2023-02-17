@@ -26,7 +26,7 @@ return require('packer').startup(function()
 	      require('gitsigns').setup()
 	    end
 	}
-	use {'hkupty/iron.nvim'}
+	use {'hkupty/iron.nvim'} -- I don't know if I need this afterall. I may just use terminal
 	--TODO ale_linter -> this may actually be nvim-lint and could be nvim-lint managed by mason
 	--TODO languagetool
 	use { 'TimUntersberger/neogit', 
@@ -89,6 +89,22 @@ return require('packer').startup(function()
         end
     }
 
+    -- giving nvim-cmp it's own section
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            {'neovim/nvim-lspconfig'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'hrsh7th/cmp-cmdline'},
+            {'hrsh7th/cmp-vsnip'},
+            {'hrsh7th/vim-vsnip'}
+        },
+        config = function()
+            require("cmp").setup()
+        end
+    }
 
 
 end)
