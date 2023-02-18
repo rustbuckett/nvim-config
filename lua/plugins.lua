@@ -96,8 +96,9 @@ return require('packer').startup(function()
         end
     }
 
-	--TODO languagetool
+	--TODO languagetool (if I can find a lua version)
 	--TODO neoformat (a plugin to autoformat code)
-	--TODO grammarous
+	--TODO grammarous (this is a vim tool, not lua)
+    --TODO magma for Jupyter
 
 end)
