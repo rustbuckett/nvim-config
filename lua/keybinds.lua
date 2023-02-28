@@ -22,6 +22,14 @@ map('n', '<C-H>', '<C-W>h', {})
 --map('n', '<C-S-->', '<C-W>-', {})
 --map('n', '<C-S-=>', '<C-W>+', {})
 
+-- change gruvbox mode
+-- later, I'll figure out how to "toggle" the setting
+map('n', '<leader>ddd', ':lua vim.o.background="dark"<cr>', {})
+map('n', '<leader>lll', ':lua vim.o.background="light"<cr>', {})
+
+--[ keybinds for ZenMode ]
+map('n', '<leader>zzz', ':ZenMode<cr>', {})
+
 --[ keybinds for the Dashboard and Telescope ]
 map('n', '<leader>ff', ':Telescope find_files<cr>', {})
 map('n', '<leader>fo', ':Telescope oldfiles<cr>', {})
