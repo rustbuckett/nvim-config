@@ -1,50 +1,63 @@
 return require('packer').startup(function()
         -- Packer can manage itself
         use {'wbthomason/packer.nvim'}
+    -- A nice dashboard
 	use {'goolord/alpha-nvim'}
+    -- Fuzzy file search
 	use {
 	    'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	    requires = { {'nvim-lua/plenary.nvim'} }
 	}
+    -- My favorite theme
 	use { "ellisonleao/gruvbox.nvim" }
+    -- Filesystem browsing in a sidebar
 	use {
 	    'nvim-tree/nvim-tree.lua',
 	    requires = { {'nvim-tree/nvim-web-devicons'} }
 	}
+    -- Better syntax highlighting among other things
 	use {
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
 	}
+    -- A more informative and configurable status line
 	use {
 	    'nvim-lualine/lualine.nvim',
 	    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
+    -- Insert those handy indentation alignment lines
 	use {'lukas-reineke/indent-blankline.nvim'}
+    -- Real time file change indicators for git
 	use {
 	    'lewis6991/gitsigns.nvim',
 	    config = function()
 	      require('gitsigns').setup()
 	    end
 	}
+    -- A REPL that runs in its own buffer
 	use {'hkupty/iron.nvim'} -- I don't know if I need this afterall. I may just use terminal
+    -- Manage your git repo from inside Neovim with a nice interface
 	use { 'TimUntersberger/neogit', 
 	    requires = { {'nvim-lua/plenary.nvim'} },
 	    config = function()
 		    require('neogit').setup()
 	    end
 	}
+    -- Focus mode for editing
     use {
         "folke/zen-mode.nvim",
         config = function()
           require("zen-mode").setup()
         end
     }
+    -- Creates match pairs for quotes and brackets
 	use {
 	    "windwp/nvim-autopairs",
     	    config = function() 
 		require("nvim-autopairs").setup()
 	    end --how do i move this to config?
 	}
+    -- Clickable tabs for buffers
     use {
         'akinsho/bufferline.nvim', 
         tag = "v3.*", 
@@ -54,13 +67,15 @@ return require('packer').startup(function()
         end
     }
 	
-    -- I didn't realize I wanted these. Found on neovimcraft.com
+    --[ I didn't realize I wanted these. Found on neovimcraft.com ]--
+    -- Quick comments
 	use {
 	    'numToStr/Comment.nvim',
 	    config = function()
 	        require('Comment').setup()
 	    end
 	}
+    -- TODO comments
     use {
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
