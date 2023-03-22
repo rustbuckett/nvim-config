@@ -42,12 +42,17 @@ return require('packer').startup(function()
 	    'nvim-lualine/lualine.nvim',
 	    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = function()
-            require('nvim-lualine')
+            require('config.nvim-lualine')
         end
 	}
 
     -- Insert those handy indentation alignment lines
-	use {'lukas-reineke/indent-blankline.nvim'}
+	use {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('config.indent-blankline')
+        end
+    }
 
     -- Real time file change indicators for git
 	use {
