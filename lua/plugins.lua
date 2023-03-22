@@ -83,16 +83,16 @@ return require('packer').startup(function()
     use {
         "folke/zen-mode.nvim",
         config = function()
-            require("zen-mode")
+            require("config.zen-mode")
         end
     }
 
     -- Creates match pairs for quotes and brackets
 	use {
 	    "windwp/nvim-autopairs",
-    	    config = function() 
-		require("nvim-autopairs").setup()
-	    end --how do i move this to config?
+    	config = function() 
+		    require("config.nvim-autopairs")
+	    end
 	}
 
     -- Clickable tabs for buffers
