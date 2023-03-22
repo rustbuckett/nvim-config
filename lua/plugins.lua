@@ -63,13 +63,19 @@ return require('packer').startup(function()
 	}
 
     -- A REPL that runs in its own buffer
-	use {'hkupty/iron.nvim'} -- I don't know if I need this afterall. I may just use terminal
+	use {
+        'hkupty/iron.nvim',
+        config = function()
+            require('config.iron')
+        end
+    } -- I don't know if I need this afterall. I may just use terminal
 
     -- Manage your git repo from inside Neovim with a nice interface
-	use { 'TimUntersberger/neogit', 
-	    requires = { {'nvim-lua/plenary.nvim'} },
+	use {
+        'TimUntersberger/neogit', 
+	    requires = {'nvim-lua/plenary.nvim'},
 	    config = function()
-		    require('neogit').setup()
+		    require('config.neogit')
 	    end
 	}
 
