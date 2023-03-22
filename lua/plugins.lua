@@ -40,7 +40,10 @@ return require('packer').startup(function()
     -- A more informative and configurable status line
 	use {
 	    'nvim-lualine/lualine.nvim',
-	    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+        config = function()
+            require('nvim-lualine')
+        end
 	}
 
     -- Insert those handy indentation alignment lines
