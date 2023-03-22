@@ -101,7 +101,7 @@ return require('packer').startup(function()
         tag = "v3.*", 
         requires = 'nvim-tree/nvim-web-devicons',
         config = function()
-            require("bufferline").setup()
+            require("config.bufferline")
         end
     }
 	
