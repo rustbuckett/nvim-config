@@ -1,36 +1,48 @@
 return require('packer').startup(function()
-        -- Packer can manage itself
-        use {'wbthomason/packer.nvim'}
+    -- Packer can manage itself
+	use {'wbthomason/packer.nvim'}
+
     -- A nice dashboard
 	use {'goolord/alpha-nvim',
 	config = function()
-		require('config.alpha-nvim')--.setup()
+		require('config.alpha-nvim')
 	end
 	}
-    -- Fuzzy file search
+    
+    -- Telescope - Fuzzy file search
+    -- Currently no custom config
 	use {
 	    'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	    requires = { {'nvim-lua/plenary.nvim'} }
 	}
+
     -- My favorite theme
 	use { "ellisonleao/gruvbox.nvim" }
+
     -- Filesystem browsing in a sidebar
 	use {
 	    'nvim-tree/nvim-tree.lua',
-	    requires = { {'nvim-tree/nvim-web-devicons'} }
+	    requires = { {'nvim-tree/nvim-web-devicons'} },
+        config = function()
+            require('config.nvim-tree')
+        end
 	}
+
     -- Better syntax highlighting among other things
 	use {
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
 	}
+
     -- A more informative and configurable status line
 	use {
 	    'nvim-lualine/lualine.nvim',
 	    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
+
     -- Insert those handy indentation alignment lines
 	use {'lukas-reineke/indent-blankline.nvim'}
+
     -- Real time file change indicators for git
 	use {
 	    'lewis6991/gitsigns.nvim',
@@ -38,8 +50,10 @@ return require('packer').startup(function()
 	      require('gitsigns').setup()
 	    end
 	}
+
     -- A REPL that runs in its own buffer
 	use {'hkupty/iron.nvim'} -- I don't know if I need this afterall. I may just use terminal
+
     -- Manage your git repo from inside Neovim with a nice interface
 	use { 'TimUntersberger/neogit', 
 	    requires = { {'nvim-lua/plenary.nvim'} },
@@ -47,6 +61,7 @@ return require('packer').startup(function()
 		    require('neogit').setup()
 	    end
 	}
+
     -- Focus mode for editing
     use {
         "folke/zen-mode.nvim",
@@ -54,6 +69,7 @@ return require('packer').startup(function()
           require("zen-mode").setup()
         end
     }
+
     -- Creates match pairs for quotes and brackets
 	use {
 	    "windwp/nvim-autopairs",
@@ -61,6 +77,7 @@ return require('packer').startup(function()
 		require("nvim-autopairs").setup()
 	    end --how do i move this to config?
 	}
+
     -- Clickable tabs for buffers
     use {
         'akinsho/bufferline.nvim', 
@@ -79,6 +96,7 @@ return require('packer').startup(function()
 	        require('Comment').setup()
 	    end
 	}
+
     -- TODO comments
     use {
         "folke/todo-comments.nvim",
@@ -87,6 +105,7 @@ return require('packer').startup(function()
           require("todo-comments").setup()
         end
     }
+
     use {
         "ThePrimeagen/refactoring.nvim",
         requires = {
@@ -107,7 +126,7 @@ return require('packer').startup(function()
     use {
         "williamboman/mason.nvim",
         config = function()
-            require("config.mason")--.setup()
+            require("config.mason")
         end
     }
     
