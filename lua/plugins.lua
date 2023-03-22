@@ -83,7 +83,7 @@ return require('packer').startup(function()
     use {
         "folke/zen-mode.nvim",
         config = function()
-          require("zen-mode").setup()
+            require("zen-mode")
         end
     }
 
