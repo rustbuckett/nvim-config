@@ -30,8 +30,11 @@ return require('packer').startup(function()
 
     -- Better syntax highlighting among other things
 	use {
-            'nvim-treesitter/nvim-treesitter',
-            run = ':TSUpdate'
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        config = function()
+            require('config.nvim-treesitter')
+        end
 	}
 
     -- A more informative and configurable status line
