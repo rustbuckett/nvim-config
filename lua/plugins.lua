@@ -2,7 +2,11 @@ return require('packer').startup(function()
         -- Packer can manage itself
         use {'wbthomason/packer.nvim'}
     -- A nice dashboard
-	use {'goolord/alpha-nvim'}
+	use {'goolord/alpha-nvim',
+	config = function()
+		require('config.alpha-nvim')--.setup()
+	end
+	}
     -- Fuzzy file search
 	use {
 	    'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -94,6 +98,19 @@ return require('packer').startup(function()
         end
     }
 
+    -- Preview markdown in a browser
+    use {
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    }
+
+    use {
+        "williamboman/mason.nvim",
+        config = function()
+            require("config.mason")--.setup()
+        end
+    }
+    
     -- giving nvim-cmp it's own section
     use {
         "hrsh7th/nvim-cmp",
