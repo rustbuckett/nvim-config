@@ -130,7 +130,7 @@ return require('packer').startup(function()
             {"nvim-treesitter/nvim-treesitter"}
         },
         config = function()
-            require("refactoring").setup()
+            require("config.refactoring")
         end
     }
 
@@ -160,7 +160,7 @@ return require('packer').startup(function()
             {'hrsh7th/vim-vsnip'}
         },
         config = function()
-            require("cmp").setup()
+            require("config.nvim-cmp")
         end
     }
 
