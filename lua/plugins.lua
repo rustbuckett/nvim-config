@@ -114,12 +114,12 @@ return require('packer').startup(function()
 	    end
 	}
 
-    -- TODO comments
+    -- TODO comments, just use keyword followed by ':'
     use {
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
         config = function()
-          require("todo-comments").setup()
+          require("config.todo-comments")
         end
     }
 
