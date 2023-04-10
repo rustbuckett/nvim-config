@@ -27,11 +27,10 @@ vim.opt.expandtab = true
 
 --[ Spell Checker Stuff ]--
 vim.opt.spelllang='en_us'
-vim.opt.spellfile='$HOME/.config/nvim/spell/en.utf-8.add'
---vim.opt.thesaurus=$HOME/.vim/thesaurus/thesaurus.txt
+vim.opt.spell = true
 vim.opt.spellsuggest='best,9'
 vim.cmd [[hi clear SpellBad]]
 vim.cmd [[hi clear SpellCap]]
-vim.cmd [[hi SpellBad ctermfg=red]]
+vim.cmd [[hi SpellBad cterm=underline]]
 vim.cmd [[hi SpellCap ctermfg=green]]
 

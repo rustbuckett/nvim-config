@@ -103,18 +103,19 @@ return require('packer').startup(function()
         },
     }
 
-    -- The only install instructions are for lazy.nvim
-    -- I have no idea how that system works so I'm having trouble adapting it
-    -- For now, this doesn't work
-    use {
-        "gaoDean/autolist.nvim",
-        ft = {
-          "markdown",
-          "text",
-          "tex",
-          "plaintex",
-        },
-    }
+    -- markdown syntax hiding and other stuff
+    use { 'ixru/nvim-markdown' }
+
+    -- -- makes ordered and unordered lists easier
+    -- use {
+    --     "gaoDean/autolist.nvim",
+    --     ft = {
+    --       "markdown",
+    --       "text",
+    --       "tex",
+    --       "plaintex",
+    --     },
+    -- }
 
 	-- TODO: languagetool (if I can find a lua version)
 	-- TODO: neoformat (a plugin to autoformat code)
