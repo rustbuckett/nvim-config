@@ -87,6 +87,7 @@ return require('packer').startup(function()
 
     -- Handles LSP, Linters, etc.
     use { "williamboman/mason.nvim" }
+    use { "williamboman/mason-lspconfig.nvim" }
     
     -- giving nvim-cmp it's own section
     use {
