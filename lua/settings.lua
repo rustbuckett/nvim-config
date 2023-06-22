@@ -5,7 +5,7 @@ vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
 --[ Some interface stuff ]--
-vim.cmd [[hi Normal guibg=NONEctermbg=NONE]]
+vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
 vim.cmd [[hi VertSplit cterm=NONE]]
 vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
 vim.opt.fillchars={eob=' '}

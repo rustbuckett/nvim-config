@@ -43,7 +43,7 @@ require("zen-mode").setup
     -- requires  Alacritty Version 0.10.0 or higher
     -- uses `alacritty msg` subcommand to change font size
     alacritty = {
-      enabled = false,
+      enabled = true,
       font = "14", -- font size
     },
   },
