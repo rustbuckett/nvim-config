@@ -99,3 +99,9 @@ require('lspconfig').lua_ls.setup {
 require('lspconfig').tsserver.setup {
 
 }
+require('lspconfig').html.setup {
+
+}
+require('lspconfig').clangd.setup {
+
+}
