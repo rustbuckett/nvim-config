@@ -4,7 +4,7 @@ return require('packer').startup(function()
 
     -- A nice dashboard
 	use { 'goolord/alpha-nvim' }
-    
+
     -- Telescope - Fuzzy file search
     -- Currently no custom config
 	use {
@@ -30,7 +30,7 @@ return require('packer').startup(function()
     -- A more informative and configurable status line
 	use {
 	    'nvim-lualine/lualine.nvim',
-	    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+	    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
 	}
 
     -- Insert those handy indentation alignment lines
@@ -40,11 +40,11 @@ return require('packer').startup(function()
 	use { 'lewis6991/gitsigns.nvim' }
 
     -- A REPL that runs in its own buffer
-	use { 'hkupty/iron.nvim' } -- I don't know if I need this afterall. I may just use terminal
+	use { 'Vigemus/iron.nvim' } -- I don't know if I need this afterall. I may just use terminal
 
     -- Manage your git repo from inside Neovim with a nice interface
 	use {
-        'TimUntersberger/neogit', 
+        'NeogitOrg/neogit', 
 	    requires = {'nvim-lua/plenary.nvim'},
 	}
 
