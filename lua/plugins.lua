@@ -3,7 +3,9 @@ return require('packer').startup(function()
 	use { 'wbthomason/packer.nvim' }
 
     -- A nice dashboard
-	use { 'goolord/alpha-nvim' }
+	use { 'goolord/alpha-nvim',
+          -- requires = { 'nvim-tree/nvim-web-devicons' },
+    }
 
     -- Telescope - Fuzzy file search
     -- Currently no custom config
