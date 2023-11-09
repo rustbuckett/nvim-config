@@ -74,3 +74,18 @@ map("n", "<leader>rbf", [[ <Cmd>lua require('refactoring').refactor('Extract Blo
 
 -- Inline variable can also pick up the identifier currently under the cursor without visual mode
 map("n", "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
+
+--[ keybinds for Bufferline ]--
+map("n", "<leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>2", "<Cmd>BufferLineGoToBuffer 2<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>3", "<Cmd>BufferLineGoToBuffer 3<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>4", "<Cmd>BufferLineGoToBuffer 4<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>5", "<Cmd>BufferLineGoToBuffer 5<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>6", "<Cmd>BufferLineGoToBuffer 6<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>7", "<Cmd>BufferLineGoToBuffer 7<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>-1", "<Cmd>BufferLineGoToBuffer -1<CR>", { noremap = true, silent = true, expr = false })
+
+map("n", "<leader>]]", ":BufferLineCycleNext<CR>", { noremap = true, silent = true, expr = false })
+map("n", "<leader>[[", ":BufferLineCycleNext<CR>", { noremap = true, silent = true, expr = false })
