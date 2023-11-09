@@ -90,7 +90,7 @@ require("lazy").setup({
     -- Handles LSP, Linters, etc.
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
-    
+
     -- giving nvim-cmp it's own section
     {
         "hrsh7th/nvim-cmp",
@@ -102,9 +102,13 @@ require("lazy").setup({
             {'hrsh7th/cmp-cmdline'},
             {'hrsh7th/cmp-vsnip'},
             {'hrsh7th/vim-vsnip'},
+            {'hrsh7th/cmp-nvim-lua'},
             {'rafamadriz/friendly-snippets'}
         },
     },
+
+    -- additional tools for rust
+    { 'simrat39/rust-tools.nvim' },
 
     -- markdown syntax hiding and other stuff
     { 'ixru/nvim-markdown' },

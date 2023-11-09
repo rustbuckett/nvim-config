@@ -61,8 +61,8 @@ cmp.setup.cmdline(':', {
 })
 
 -- using Mason (from article https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/)
-require('mason').setup()
-require('mason-lspconfig').setup()
+-- require('mason').setup()
+-- require('mason-lspconfig').setup()
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -72,7 +72,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- install all plugins with "pip install 'python-lsp-server[all]'"
 -- update pylsp in mason
 require('lspconfig').pylsp.setup {
-  --capabilities = capabilities
+  capabilities = capabilities
 }
 require('lspconfig').lua_ls.setup {
   settings = {
@@ -96,15 +96,9 @@ require('lspconfig').lua_ls.setup {
     },
   },
 }
-require('lspconfig').tsserver.setup {
 
-}
-require('lspconfig').html.setup {
-
-}
-require('lspconfig').clangd.setup {
-
-}
+require('lspconfig').tsserver.setup {}
+require('lspconfig').html.setup {}
+require('lspconfig').clangd.setup {}
 require('lspconfig').dockerls.setup {}
-
 require('lspconfig').docker_compose_language_service.setup {}
