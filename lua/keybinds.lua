@@ -89,3 +89,16 @@ map("n", "<leader>-1", "<Cmd>BufferLineGoToBuffer -1<CR>", { noremap = true, sil
 
 map("n", "<leader>]]", ":BufferLineCycleNext<CR>", { noremap = true, silent = true, expr = false })
 map("n", "<leader>[[", ":BufferLineCycleNext<CR>", { noremap = true, silent = true, expr = false })
+
+--[ keybinds for Compiler ]--
+-- Open compiler
+map('n', '<F6>', "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
+
+-- Redo last selected option
+map('n', '<S-F6>',
+     "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
+  .. "<cmd>CompilerRedo<cr>",
+ { noremap = true, silent = true })
+
+-- Toggle compiler results
+map('n', '<S-F7>', "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })

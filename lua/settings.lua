@@ -11,6 +11,7 @@ vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
 vim.opt.fillchars={eob=' '}
 vim.wo.number = true
 vim.opt.termguicolors = true
+vim.opt.shell = "zsh"
 
 vim.opt.number = true -- show numbers
 vim.opt.title = true -- set the window title to filename
