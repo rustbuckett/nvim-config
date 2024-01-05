@@ -102,3 +102,6 @@ require('lspconfig').html.setup {}
 require('lspconfig').clangd.setup {}
 require('lspconfig').dockerls.setup {}
 require('lspconfig').docker_compose_language_service.setup {}
+require('lspconfig').mutt_ls.setup {}
+require('lspconfig').java_language_server.setup {}
+require('lspconfig').bashls.setup {}

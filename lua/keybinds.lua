@@ -8,10 +8,10 @@ vim.g.mapleader = ' '
 
 --[ keybinds for neovim itself ]
 -- move around window splits easier
-map('i', '<C-J>', '<C-W><C-J>', {})
-map('i', '<C-K>', '<C-W><C-K>', {})
-map('i', '<C-L>', '<C-W><C-L>', {})
-map('i', '<C-H>', '<C-W><C-H>', {})
+map('i', '<C-J>', '<C-o>gj', {})
+map('i', '<C-K>', '<C-o>gk', {})
+map('i', '<C-L>', '<Right>', {})
+map('i', '<C-H>', '<Left>', {})
 map('n', '<C-J>', '<C-W>j', {})
 map('n', '<C-K>', '<C-W>k', {})
 map('n', '<C-L>', '<C-W>l', {})
@@ -95,10 +95,7 @@ map("n", "<leader>[[", ":BufferLineCycleNext<CR>", { noremap = true, silent = tr
 map('n', '<F6>', "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
 
 -- Redo last selected option
-map('n', '<S-F6>',
-     "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
-  .. "<cmd>CompilerRedo<cr>",
- { noremap = true, silent = true })
+map('n', '<S-F6>', "<cmd>CompilerRedo<cr>", { noremap = true, silent = true })
 
 -- Toggle compiler results
 map('n', '<S-F7>', "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })
