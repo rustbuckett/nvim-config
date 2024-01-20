@@ -15,5 +15,17 @@ require("nvim-autopairs").setup
     map_cr = true,
     map_bs = true,  -- map the <BS> key
     map_c_h = false,  -- Map the <C-h> key to delete a pair
-    map_c_w = false, -- map <c-w> to delete a pair if possible
+    fast_wrap = {
+        map = '<M-e>',
+        chars = { '{', '[', '(', '"', "'" },
+        pattern = [=[[%'%"%>%]%)%}%,]]=],
+        end_key = '$',
+        before_key = 'h',
+        after_key = 'l',
+        cursor_pos_before = true,
+        keys = 'qwertyuiopzxcvbnmasdfghjkl',
+        manual_position = true,
+        highlight = 'Search',
+        highlight_grey='Comment'
+    },   map_c_w = false, -- map <c-w> to delete a pair if possible
 }
