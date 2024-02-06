@@ -44,11 +44,16 @@ require("lazy").setup({
 	-- A REPL that builds in its own buffer
 	{ "Vigemus/iron.nvim" }, -- I don't know if I need this afterall. I may just use terminal
 
-	-- -- Manage your git repo from inside Neovim with a nice interface
-	-- {
-	-- 	"NeogitOrg/neogit",
-	-- 	dependencies = { "nvim-lua/plenary.nvim" },
-	-- },
+	-- Manage your git repo from inside Neovim with a nice interface
+	{
+		"NeogitOrg/neogit",
+		dependencies = {
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",
+            "nvim-telescope/telescope.nvim",
+        },
+        config = true
+	},
 
 	-- Focus mode for editing
 	{ "folke/zen-mode.nvim" },
@@ -156,10 +161,6 @@ require("lazy").setup({
             "nvim-lua/plenary.nvim",
             "hrsh7th/nvim-cmp",
         },
-        config = function()
-            require("codeium").setup({
-            })
-        end
     },
     -- -- Github Copilot [[didn't realize it was a subscription!]]
     -- {
