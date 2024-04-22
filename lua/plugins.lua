@@ -173,7 +173,12 @@ require("lazy").setup({
                 -- Configuration here, or leave empty to use defaults
             })
         end
-    }
+    },
+
+    -- none-ls, the replacement for null-ls, for use with prettier
+    {
+        "nvimtools/none-ls.nvim",
+    },
 
     -- -- Github Copilot [[didn't realize it was a subscription!]]
     -- {
