@@ -51,6 +51,10 @@ require("zen-mode").setup
   },
   -- callback where you can add custom code when the Zen window opens
   on_open = function(win)
+    -- Hopefully, this will prevent Zen Mode from inserting \n at 80
+    vim.cmd([[
+      autocmd FileType markdown setlocal wrap linebreak nolist textwidth=0
+    ]])
   end,
   -- callback where you can add custom code when the Zen window closes
   on_close = function()

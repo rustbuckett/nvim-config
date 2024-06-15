@@ -20,7 +20,7 @@ vim.opt.smartcase = true -- ignore case when searching unless I type capital
 vim.opt.linebreak = true -- wrap lines at convenient points
 vim.opt.scrolloff = 5 -- number of lines to keep above and below
 
---[ tab stuff
+--[ tab stuff ]--
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 0
