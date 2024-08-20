@@ -10,8 +10,12 @@ require("lazy").setup({
 	-- Currently no custom config
 	{
 		"nvim-telescope/telescope.nvim",
-		version = "0.1.1",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		tag = "0.1.8",
+		dependencies = {
+            "nvim-lua/plenary.nvim",
+            "BurntSushi/ripgrep",
+            "sharkdp/fd",
+            },
 	},
 
 	-- My favorite theme
@@ -141,13 +145,13 @@ require("lazy").setup({
 		},
 	},
 
-	-- Neovim DAP
-	{
-		"mfussenegger/nvim-dap",
-	},
-	{ -- DAP Python
-		"mfussenegger/nvim-dap-python",
-	},
+	-- -- Neovim DAP
+	-- {
+	-- 	"mfussenegger/nvim-dap",
+	-- },
+	-- { -- DAP Python
+	-- 	"mfussenegger/nvim-dap-python",
+	-- },
 
 	-- Nvim Formatter
 	{
