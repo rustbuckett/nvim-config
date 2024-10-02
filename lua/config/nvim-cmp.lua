@@ -106,3 +106,4 @@ require('lspconfig').docker_compose_language_service.setup {}
 require('lspconfig').mutt_ls.setup {}
 require('lspconfig').java_language_server.setup {}
 require('lspconfig').bashls.setup {}
+require('lspconfig').asm_lsp.setup {}
