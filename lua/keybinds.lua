@@ -6,6 +6,8 @@ local map = vim.api.nvim_set_keymap
 
 vim.g.mapleader = ' '
 
+map('i', 'jj', '<esc>', {})
+
 --[ keybinds for neovim itself ]
 -- move around window splits easier
 map('i', '<C-J>', '<C-o>gj', {})
