@@ -48,9 +48,9 @@ vim.opt.shortmess = vim.opt.shortmess + { c = true}
 vim.api.nvim_set_option('updatetime', 300)
 
 --[ Setting for Prettier to autoformat on save ]--
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*.html",
-    callback = function()
-        vim.lsp.buf.format({ timeout_ms = 1000 })
-    end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--     pattern = "*.html",
+--     callback = function()
+--         vim.lsp.buf.format({ timeout_ms = 1000 })
+--     end,
+-- })
