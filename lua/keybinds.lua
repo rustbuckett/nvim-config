@@ -24,6 +24,13 @@ map('n', '<C-H>', '<C-W>h', {})
 --map('n', '<C-S-->', '<C-W>-', {})
 --map('n', '<C-S-=>', '<C-W>+', {})
 
+--[ keybinds for window-picker ]--
+-- Move to window, or swap by using shift + letter
+-- map('n', '<leader>ww', ":WindowPick", {})
+-- Swap with any window
+-- map('n', '<leader>ws', ":WindowSwap", {})
+-- map('n', '<leader>wq', ":WindowZap", {})
+
 -- change gruvbox mode
 -- later, I'll figure out how to "toggle" the setting
 map('n', '<leader>ddd', ':lua vim.o.background="dark"<cr>', {})

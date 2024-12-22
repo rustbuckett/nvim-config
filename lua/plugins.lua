@@ -64,13 +64,16 @@ require("lazy").setup({
         }
     },
 
-    -- Pick, swap, close, manage windows
+    -- Pick window from Neotree
     {
         's1n7ax/nvim-window-picker',
         name = 'window-picker',
         event = 'VeryLazy',
         version = '2.*',
     },
+
+    -- Pick, swap, or close a window
+    -- { 'ten3roberts/window-picker.nvim' },
 
 	-- Better syntax highlighting among other things
 	{
