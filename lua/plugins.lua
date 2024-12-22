@@ -64,6 +64,14 @@ require("lazy").setup({
         }
     },
 
+    -- Pick, swap, close, manage windows
+    {
+        's1n7ax/nvim-window-picker',
+        name = 'window-picker',
+        event = 'VeryLazy',
+        version = '2.*',
+    },
+
 	-- Better syntax highlighting among other things
 	{
 		"nvim-treesitter/nvim-treesitter",
