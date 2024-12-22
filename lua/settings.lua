@@ -45,7 +45,7 @@ vim.cmd [[hi SpellCap ctermfg=green]]
 -- updatetime: set updatetime for CursorHold
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
-vim.api.nvim_set_option('updatetime', 300)
+-- vim.api.nvim_set_option('updatetime', 300)
 
 --[ Setting for Prettier to autoformat on save ]--
 -- vim.api.nvim_create_autocmd("BufWritePre", {
