@@ -5,6 +5,8 @@ vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
 --[ Some interface stuff ]--
+-- vim.api.nvim_set_hl(0, "Normal", { ctermbg = "NONE", guibg = "NONE" })
+-- vim.api.nvim_set_hl(0, "VertSplit", { ctermfg = "NONE", ctermbg = "NONE", guibg = "NONE", guifg = "NONE" })
 vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
 vim.cmd [[hi VertSplit cterm=NONE]]
 vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
