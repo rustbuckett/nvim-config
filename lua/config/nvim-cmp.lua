@@ -98,7 +98,8 @@ require('lspconfig').lua_ls.setup {
   },
 }
 
-require('lspconfig').tsserver.setup {}
+-- require('lspconfig').tsserver.setup {} -- deprecated
+require('lspconfig').ts_ls.setup {}
 require('lspconfig').html.setup {}
 require('lspconfig').clangd.setup {}
 require('lspconfig').dockerls.setup {}
