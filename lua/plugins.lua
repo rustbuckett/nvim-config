@@ -6,6 +6,12 @@ require("lazy").setup({
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 
+    -- {
+    --     'nvimdev/dashboard-nvim',
+    --     event = 'VimEnter',
+    --     dependencies = { {'nvim-tree/nvim-web-devicons'}}
+    -- },
+
 	-- Telescope - Fuzzy file search
 	-- Currently no custom config
 	{
