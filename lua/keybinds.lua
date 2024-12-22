@@ -42,7 +42,10 @@ map('n', '<leader>ls', ':SessionLoad<cr>', {})
 map('n', '<leader>ss', ':SessionSave<cr>', {})
 
 --[ keybinds for NvimTree ]
-map('n', '<leader>tt', ':NvimTreeToggle<cr>', {})
+map('n', '<leader>tt', ':Neotree toggle<cr>', {})
+-- map('n', '<leader>tff', ':Neotree focus<cr>', {})
+map('n', '<leader>tf', ':Neotree float<cr>', {})
+map('n', '<leader>tl', ':Neotree left<cr>', {})
 
 --[ keybinds for iron.nvim ]
 --map <F5> <Cmd>lua require("iron").core.send(vim.api.nvim_buf_get_option(0,"ft"), vim.api.nvim_buf_get_lines(0, 0, -1, false))<Cr>
