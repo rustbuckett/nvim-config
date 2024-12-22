@@ -34,10 +34,10 @@ map('n', '<leader>zzz', ':ZenMode<cr>', {})
 
 --[ keybinds for the Dashboard and Telescope ]
 map('n', '<leader>ff', ':Telescope find_files<cr>', {})
-map('n', '<leader>fo', ':Telescope oldfiles<cr>', {})
-map('n', '<leader>fw', ':Telescope live_grep<cr>', {})
+map('n', '<leader>fh', ':Telescope oldfiles<cr>', {})
+map('n', '<leader>fg', ':Telescope live_grep<cr>', {})
 -- map('n', '<leader>fn', ':DashboardNewFile<cr>', {})
-map('n', '<leader>bm', ':Telescope marks<cr>', {})
+map('n', '<leader>fm', ':Telescope marks<cr>', {})
 map('n', '<leader>ls', ':SessionLoad<cr>', {})
 map('n', '<leader>ss', ':SessionSave<cr>', {})
 
