@@ -5,12 +5,13 @@ vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
 --[ Some interface stuff ]--
-vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "VertSplit", { fg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = "NONE", bg = "NONE" })
--- vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "VertSplit", { fg = "NONE", bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = "NONE", bg = "NONE" })
+vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
 -- vim.cmd [[hi VertSplit cterm=NONE]]
--- vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
+vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
+vim.cmd [[hi WinSeparator guibg=NONE guifg=#665c54]]
 vim.opt.fillchars={eob=' '}
 vim.wo.number = true
 vim.opt.termguicolors = true
