@@ -5,15 +5,10 @@ vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
 --[ Some interface stuff ]--
-vim.api.nvim_set_hl(0, "Normal", { bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none", ctermbg = "none" })
--- vim.api.nvim_set_hl(0, "VertSplit", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none", ctermbg = "none" })
 -- vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermfg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#665c54", bg = "NONE" })
--- vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
--- vim.cmd [[hi VertSplit cterm=NONE]]
--- vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
--- vim.cmd [[hi WinSeparator guibg=NONE guifg=#665c54]]
 vim.opt.fillchars={eob=' '}
 vim.wo.number = true
 vim.opt.termguicolors = true
@@ -61,3 +56,16 @@ vim.opt.shortmess = vim.opt.shortmess + { c = true}
 --         vim.lsp.buf.format({ timeout_ms = 1000 })
 --     end,
 -- })
+
+--[ this might make a border around the whole window ]--
+--it does, but it breaks other stuff
+-- vim.api.nvim_open_win(0, true, {
+--   relative = 'editor',
+--   width = vim.o.columns,
+--   height = vim.o.lines,
+--   row = 0,
+--   col = 0,
+--   style = 'minimal',
+--   border = 'double'
+-- })
+

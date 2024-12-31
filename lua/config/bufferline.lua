@@ -86,7 +86,7 @@ require('bufferline').setup {
         ---- can also be a table containing 2 custom separators
         ---- [focused and unfocused]. eg: { '|', '|' }
         --separator_style = "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
-        separator_style = "thin",
+        separator_style = "slant",
         --enforce_regular_tabs = false | true,
         --always_show_bufferline = true | false,
         --hover = {
@@ -102,15 +102,55 @@ require('bufferline').setup {
     highlights = {
         fill = {
             fg = "#ebdbb2",
-            bg = "none",
+            bg = "#1d2021",
         },
         background = {
-            fg = "none",
-            bg = "none",
+            fg = "#93896f",
+            bg = "#181a1b",
         },
-        tab = {
+        numbers = {
+            fg = "#93896f",
+            bg = "#181a1b",
+        },
+        separator = {
+            fg = "#1d2021",
+            bg = "#181a1b",
+        },
+        close_button = {
+            fg = "#93896f",
+            bg = "#181a1b",
+        },
+        buffer_selected = {
             fg = "#ebdbb2",
-            bg = "none",
-        }
+            bg = "#1d2021",
+        },
+        numbers_selected = {
+            fg = "#ebdbb2",
+            bg = "#1d2021",
+        },
+        separator_selected = {
+            fg = "#1d2021",
+            bg = "#1d2021",
+        },
+        close_button_selected = {
+            fg = "#ebdbb2",
+            bg = "#1d2021",
+        },
+        buffer_visible = {
+            fg = "#ebdbb2",
+            bg = "#232728",
+        },
+        numbers_visible = {
+            fg = "#ebdbb2",
+            bg = "#232728",
+        },
+        separator_visible = {
+            fg = "#1d2021",
+            bg = "#232728",
+        },
+        close_button_visible = {
+            fg = "#ebdbb2",
+            bg = "#232728",
+        },
     },
 }
