@@ -58,7 +58,7 @@ require('bufferline').setup {
         --end,
         offsets = {
            {
-               filetype = "Neotree",
+               filetype = "neo-tree",
                text = "File Explorer",
                text_align = "left",
                separator = true
@@ -86,7 +86,7 @@ require('bufferline').setup {
         ---- can also be a table containing 2 custom separators
         ---- [focused and unfocused]. eg: { '|', '|' }
         --separator_style = "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
-        separator_style = "slant",
+        separator_style = "thin",
         --enforce_regular_tabs = false | true,
         --always_show_bufferline = true | false,
         --hover = {
@@ -98,15 +98,19 @@ require('bufferline').setup {
         --    -- add custom logic
         --    return buffer_a.modified > buffer_b.modified
         --end
-        highlights = {
-            fill = {
-                fg = { attribute = "fg", highlight = "#ebdbb2" },
-                bg = { attribute = "bg", highlight = "StatusLine" },
-            },
-            background = {
-                fg = { attribute = "fg", highlight = "#1d2021" },
-                bg = { attribute = "bg", highlight = "#1d2021" },
-            },
+    },
+    highlights = {
+        fill = {
+            fg = "#ebdbb2",
+            bg = "none",
         },
-    }
+        background = {
+            fg = "none",
+            bg = "none",
+        },
+        tab = {
+            fg = "#ebdbb2",
+            bg = "none",
+        }
+    },
 }
