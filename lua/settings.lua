@@ -5,13 +5,15 @@ vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
 --[ Some interface stuff ]--
--- vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none", ctermbg = "none" })
 -- vim.api.nvim_set_hl(0, "VertSplit", { fg = "NONE", bg = "NONE" })
--- vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = "NONE", bg = "NONE" })
-vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
+-- vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermfg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#665c54", bg = "NONE" })
+-- vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
 -- vim.cmd [[hi VertSplit cterm=NONE]]
-vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
-vim.cmd [[hi WinSeparator guibg=NONE guifg=#665c54]]
+-- vim.cmd [[hi EndOfBuffer ctermfg=NONE ctermbg=NONE]]
+-- vim.cmd [[hi WinSeparator guibg=NONE guifg=#665c54]]
 vim.opt.fillchars={eob=' '}
 vim.wo.number = true
 vim.opt.termguicolors = true
@@ -23,6 +25,7 @@ vim.opt.cursorline = true -- highlight current line
 vim.opt.smartcase = true -- ignore case when searching unless I type capital
 vim.opt.linebreak = true -- wrap lines at convenient points
 vim.opt.scrolloff = 5 -- number of lines to keep above and below
+vim.opt.undofile = true -- persistent undo
 
 --[ tab stuff ]--
 vim.opt.tabstop = 4

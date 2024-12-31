@@ -42,7 +42,10 @@ require("lazy").setup({
 	},
 
 	-- My favorite theme
-	"ellisonleao/gruvbox.nvim",
+	{ "ellisonleao/gruvbox.nvim" },
+
+    -- Shade: dim the foreground of inactive buffers
+    -- { "sunjon/shade.nvim" }, -- turns transparent background black
 
 	-- Filesystem browsing in a sidebar
 	-- {
