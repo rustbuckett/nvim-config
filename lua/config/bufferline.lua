@@ -56,14 +56,14 @@ require('bufferline').setup {
         --        return true
         --    end
         --end,
-        --offsets = {
-        --    {
-        --        filetype = "NvimTree",
-        --        text = "File Explorer" | function ,
-        --        text_align = "left" | "center" | "right"
-        --        separator = true
-        --    }
-        --},
+        offsets = {
+           {
+               filetype = "Neotree",
+               text = "File Explorer",
+               text_align = "left",
+               separator = true
+           }
+        },
         --color_icons = true | false, -- whether or not to add the filetype icon highlights
         --get_element_icon = function(element)
         --  -- element consists of {filetype: string, path: string, extension: string, directory: string}
@@ -86,7 +86,7 @@ require('bufferline').setup {
         ---- can also be a table containing 2 custom separators
         ---- [focused and unfocused]. eg: { '|', '|' }
         --separator_style = "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
-        separator_style = "thin",
+        separator_style = "slant",
         --enforce_regular_tabs = false | true,
         --always_show_bufferline = true | false,
         --hover = {
@@ -98,5 +98,15 @@ require('bufferline').setup {
         --    -- add custom logic
         --    return buffer_a.modified > buffer_b.modified
         --end
+        highlights = {
+            fill = {
+                fg = { attribute = "fg", highlight = "#ebdbb2" },
+                bg = { attribute = "bg", highlight = "StatusLine" },
+            },
+            background = {
+                fg = { attribute = "fg", highlight = "#1d2021" },
+                bg = { attribute = "bg", highlight = "#1d2021" },
+            },
+        },
     }
 }
