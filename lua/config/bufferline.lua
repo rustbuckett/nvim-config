@@ -122,19 +122,27 @@ require('bufferline').setup {
         },
         buffer_selected = {
             fg = "#ebdbb2",
-            bg = "#1d2021",
+            bg = "#282828",
         },
         numbers_selected = {
             fg = "#ebdbb2",
-            bg = "#1d2021",
+            bg = "#282828",
         },
         separator_selected = {
             fg = "#1d2021",
-            bg = "#1d2021",
+            bg = "#282828",
         },
         close_button_selected = {
             fg = "#ebdbb2",
-            bg = "#1d2021",
+            bg = "#282828",
+        },
+        indicator_selected = {
+            fg = "#282828",
+            bg = "#282828",
+        },
+        modified_selected = {
+            fg = "#ebdbb2",
+            bg = "#282828",
         },
         buffer_visible = {
             fg = "#ebdbb2",

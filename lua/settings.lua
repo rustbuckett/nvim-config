@@ -5,10 +5,10 @@ vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
 --[ Some interface stuff ]--
-vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
 -- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none", ctermbg = "none" })
 -- vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermfg = "NONE", ctermbg = "NONE" })
-vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#665c54", bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#665c54", bg = "NONE" })
 vim.opt.fillchars={eob=' '}
 vim.wo.number = true
 vim.opt.termguicolors = true
