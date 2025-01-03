@@ -205,9 +205,7 @@ require("lazy").setup({
 	-- },
 
 	-- Nvim Formatter
-	{
-		"mhartington/formatter.nvim",
-	},
+	{ "mhartington/formatter.nvim", },
 
     -- Codeium, the free Copilot alternative
     {
@@ -231,13 +229,16 @@ require("lazy").setup({
     },
 
     -- none-ls, the replacement for null-ls, for use with prettier
-    {
-        "nvimtools/none-ls.nvim",
-    },
+    { "nvimtools/none-ls.nvim", },
 
     -- Project management
+    { "ahmedkhalf/project.nvim", },
+
     {
-        "ahmedkhalf/project.nvim",
+        'barrett-ruth/live-server.nvim',
+        build = 'pnpm add -g live-server',
+        cmd = { 'LiveServerStart', 'LiveServerStop' },
+        config = true
     },
 
     -- {
