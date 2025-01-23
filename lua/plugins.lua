@@ -234,11 +234,23 @@ require("lazy").setup({
     -- Project management
     { "ahmedkhalf/project.nvim", },
 
+    -- Live Server
     {
         'barrett-ruth/live-server.nvim',
         build = 'pnpm add -g live-server',
         cmd = { 'LiveServerStart', 'LiveServerStop' },
         config = true
+    },
+
+    -- Dart tools
+    {
+        'nvim-flutter/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+        config = true,
     },
 
     -- {
